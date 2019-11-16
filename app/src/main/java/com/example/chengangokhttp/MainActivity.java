@@ -13,7 +13,6 @@ import com.example.okhttp_lib.listener.OkHttpStringRequestListener;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = "cj";
-
     private Button bt_get;
     private Button bt_post;
 
@@ -43,14 +42,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 OkHttpRequest.getInstance().getRequest(okHttpRequestEntity, new OkHttpStringRequestListener() {
                     @Override
                     public void onSuccess(String response) {
-
-                        Log.e(TAG, "onSuccess: " +response);
+                        Log.e(TAG, "onSuccess: " + response);
                     }
 
                     @Override
                     public void onError(String msg) {
-                        Log.e(TAG, "onError: "+msg );
-
+                        Log.e(TAG, "onError: " + msg);
                     }
                 });
 
@@ -59,23 +56,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String url2 = "https://www.wanandroid.com/user/login";
                 OkHttpRequestEntity okHttpRequestEntity2 = new OkHttpRequestEntity(url2, url2);
-                okHttpRequestEntity2.addParam("username","17131535183");
-                okHttpRequestEntity2.addParam("password","zhang6557805");
+                okHttpRequestEntity2.addParam("username", "hellowwww");
+                okHttpRequestEntity2.addParam("password", "zhang123");
                 OkHttpRequest.getInstance().postRequest(okHttpRequestEntity2, new OkHttpStringRequestListener() {
                     @Override
                     public void onSuccess(String response) {
-                        Log.e(TAG, "onSuccess: "+response );
+                        Log.e(TAG, "onSuccess: " + response);
                     }
 
                     @Override
                     public void onError(String msg) {
-                        Log.e(TAG, "onError: "+msg );
-
+                        Log.e(TAG, "onError: " + msg);
                     }
                 });
-
-
-
                 break;
         }
     }
